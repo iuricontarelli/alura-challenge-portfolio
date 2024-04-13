@@ -1,0 +1,505 @@
+/*CSS Reset / Normalize*/
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root {
+  /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+  /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+  --cor-de-fundo: #f5f5f5;
+  --cor-de-link: #000;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--cor-de-fundo);
+  font-family: "Raleway";
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-de-link);
+}
+
+/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
+de utiliza-la. 
+
+Mas o que é o BEM?
+
+BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
+web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
+Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
+de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
+
+Link da documentação oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+/* Sessão de Menu */
+section.menu {
+  background-color: #ffc107; /* Cor de fundo do menu */
+  color: #333; /* Cor do texto no menu */
+  padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilizando o título do menu */
+.menu__title {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Estilizando o logotipo do menu */
+.menu img {
+  width: 50px; /* Tamanho do logotipo */
+  vertical-align: middle; /* Alinhamento vertical */
+}
+
+/* Estilizando a lista de itens do menu */
+.menu__list {
+  margin: 0;
+  padding: 0;
+}
+
+.menu__list__item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu__list__item:last-child {
+  margin-right: 0; /* Remove a margem direita do último item */
+}
+
+.menu__list__item a {
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transição suave da cor do texto */
+}
+
+.menu__list__item a:hover,
+.menu__list__item__contato a:hover {
+  color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+/* Sessão de Título */
+section.title {
+  background-color: #fff; /* Cor de fundo do título */
+  color: #333; /* Cor do texto no título */
+  padding: 50px 20px; /* Espaçamento interno */
+  text-align: center; /* Centralizar o conteúdo */
+}
+
+/* Estilizando o subtítulo */
+.title__subsection {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Estilizando a lista de redes sociais */
+.title__network {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.title__network__item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.title__network__item:last-child {
+  margin-right: 0; /* Remove a margem direita do último item */
+}
+
+.title__network__item a {
+  color: #333;
+  transition: color 0.3s ease; /* Transição suave da cor do texto */
+}
+
+.title__network__item a:hover {
+  color: #ffc107; /* Cor do texto ao passar o mouse */
+}
+
+/* Sessão Sobre */
+section.about {
+  background-color: #fff; /* Cor de fundo da sessão */
+  color: #333; /* Cor do texto */
+  padding: 50px 20px; /* Espaçamento interno */
+}
+
+/* Estilizando o título da Sessão Sobre */
+.about__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizando os parágrafos */
+.about__paragraph {
+  margin-bottom: 20px;
+}
+
+/* Estilizando a assinatura */
+.about img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Garante que a imagem não afete o layout */
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Sessão de Skills */
+section.skills {
+  background-color: #fff; /* Cor de fundo da sessão */
+  color: #333; /* Cor do texto */
+  padding: 50px 20px; /* Espaçamento interno */
+}
+
+/* Estilizando o título da Sessão de Skills */
+.skills__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizando a linha de Skills */
+.skills__line {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens de Skills quebrem para a próxima linha conforme necessário */
+}
+
+/* Estilizando o contêiner de cada Skill */
+.skills__box {
+  width: 33.33%; /* Define a largura dos itens de Skills para ocupar um terço da largura do contêiner pai */
+  padding: 10px; /* Espaçamento interno */
+  box-sizing: border-box; /* Garante que o padding não altere a largura total do contêiner */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Estilizando a imagem e o nome da Skill */
+.skills__img {
+  width: 50px; /* Tamanho da imagem */
+  height: 50px;
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.skills__name {
+  font-weight: bold; /* Deixa o nome da Skill em negrito */
+}
+
+/* Sessão de Hobbies */
+section.hobbies {
+  background-color: #fff; /* Cor de fundo da sessão */
+  color: #333; /* Cor do texto */
+  padding: 50px 20px; /* Espaçamento interno */
+}
+
+/* Estilizando o título da Sessão de Hobbies */
+.hobbies__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizando a linha de Hobbies */
+.hobbies__line {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens de Hobbies quebrem para a próxima linha conforme necessário */
+}
+
+/* Estilizando o contêiner de cada Hobby */
+.hobbies__box {
+  width: 33.33%; /* Define a largura dos itens de Hobbies para ocupar um terço da largura do contêiner pai */
+  padding: 10px; /* Espaçamento interno */
+  box-sizing: border-box; /* Garante que o padding não altere a largura total do contêiner */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Estilizando a imagem e o nome do Hobby */
+.hobbies__img {
+  width: 50px; /* Tamanho da imagem */
+  height: 50px;
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.hobbies__name {
+  font-weight: bold; /* Deixa o nome do Hobby em negrito */
+}
+
+/* Sessão de Formação Acadêmica */
+section.academic {
+  background-color: #f0f0f0; /* Cor de fundo da sessão */
+  color: #333; /* Cor do texto */
+  padding: 50px 20px; /* Espaçamento interno */
+}
+
+/* Estilizando o título da Sessão de Formação Acadêmica */
+.academic__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizando o contêiner de cada curso */
+.academic__courses__box {
+  margin-bottom: 20px; /* Espaçamento inferior entre os cursos */
+}
+
+/* Estilizando o título do curso */
+.academic__courses__item__title {
+  font-weight: bold;
+}
+
+/* Estilizando o subtítulo do curso */
+.academic__courses__item__subtitle {
+  font-style: italic;
+}
+
+/* Sessão de Experiência Profissional */
+section.experience {
+  background-color: #fff; /* Cor de fundo da sessão */
+  color: #333; /* Cor do texto */
+  padding: 50px 20px; /* Espaçamento interno */
+}
+
+/* Estilizando o título da Sessão de Experiência Profissional */
+.experience__section__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizando os contêineres de cada experiência */
+.experiencie__box {
+  margin-bottom: 20px; /* Espaçamento inferior entre as experiências */
+}
+
+/* Estilizando o título da experiência */
+.experience__title {
+  font-weight: bold;
+}
+
+/* Estilizando o texto da experiência */
+.experience__text {
+  font-style: italic;
+}
+
+/* Estilizando os botões */
+.experience__description {
+  margin-top: 10px; /* Espaçamento superior */
+}
+
+.experiencia__botao--repo,
+.experiencia__botao--demo {
+  background-color: #ffc107; /* Cor de fundo dos botões */
+  color: #fff; /* Cor do texto dos botões */
+  padding: 5px 10px; /* Espaçamento interno dos botões */
+  border: none; /* Removendo a borda dos botões */
+  border-radius: 5px; /* Arredondando as bordas dos botões */
+  cursor: pointer; /* Alterando o cursor ao passar sobre os botões */
+  transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+.experiencia__botao--repo:hover,
+.experiencia__botao--demo:hover {
+  background-color: #333; /* Cor de fundo dos botões ao passar o mouse */
+}
+
+/* Sessão de Contato */
+section.formcontato {
+  background-color: #f0f0f0; /* Cor de fundo da sessão */
+  color: #333; /* Cor do texto */
+  padding: 50px 20px; /* Espaçamento interno */
+}
+
+/* Estilizando o título da Sessão de Contato */
+.formcontato__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Estilizando o subtexto da Sessão de Contato */
+.formcontato__subtext {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Estilizando o formulário de contato */
+.formcontato__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estilizando os campos do formulário */
+.formcontato__input,
+.formcontato__textarea {
+  width: 100%; /* Define a largura dos campos do formulário */
+  margin-bottom: 20px; /* Espaçamento inferior entre os campos */
+  padding: 10px; /* Espaçamento interno */
+  box-sizing: border-box; /* Garante que o padding não altere a largura total do campo */
+  border: 1px solid #ccc; /* Adiciona uma borda para distinguir os campos */
+  border-radius: 5px; /* Arredondando as bordas */
+}
+
+/* Estilizando o botão de enviar */
+.formcontato__botao {
+  background-color: #ffc107; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 10px 20px; /* Espaçamento interno do botão */
+  border: none; /* Removendo a borda */
+  border-radius: 5px; /* Arredondando as bordas */
+  cursor: pointer; /* Alterando o cursor ao passar sobre o botão */
+  transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+}
+
+.formcontato__botao:hover {
+  background-color: #333; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Sessão de Footer */
+section.footer {
+  background-color: #333; /* Cor de fundo da sessão */
+  color: #fff; /* Cor do texto */
+  padding: 20px; /* Espaçamento interno */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Estilizando o texto do Rodapé */
+.footer p {
+  margin: 0; /* Remove as margens padrão */
+}
+
+/* Estilizando o link no Rodapé */
+.footer a {
+  color: #ffc107; /* Cor do link */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: color 0.3s ease; /* Transição suave da cor */
+}
+
+.footer a:hover {
+  color: #fff; /* Cor do link ao passar o mouse */
+}
+
+/* Chegou a hora de se desafiar com a responsividade, 
+utilize como referência os breakpoints @media abaixo*/
+
+/* Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+  /* Menu */
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* Title */
+  .title__div {
+    flex-direction: row;
+  }
+
+  .title__container {
+    padding: 0 20px;
+  }
+
+  /* Skills e Hobbies */
+  .skills__line,
+  .hobbies__line {
+    justify-content: space-between;
+  }
+
+  .skills__box,
+  .hobbies__box {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+
+  /* Academic e Experience */
+  .academic__courses__box,
+  .experiencie__box {
+    width: 48%;
+  }
+
+  /* Formcontato */
+  .formcontato__text {
+    width: 50%;
+    padding-right: 20px;
+    text-align: justify;
+  }
+
+  .formcontato__img {
+    max-width: 50%; /* Definir largura máxima para 50% da largura do contêiner pai */
+    height: auto; /* Garantir proporções corretas da imagem */
+    margin-right: 20px; /* Espaçamento à direita para separar a imagem do texto */
+  }
+
+  .formcontato__text {
+    width: 50%; /* Definir largura do texto */
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px;
+  }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  /* Menu */
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* Title */
+  .title__div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title__profile {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .title__container {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  /* About */
+  .about__container {
+    padding: 0 20px;
+    text-align: justify;
+  }
+
+  /* Skills e Hobbies */
+  .skills__line,
+  .hobbies__line {
+    flex-direction: column;
+  }
+
+  .skills__box,
+  .hobbies__box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Academic e Experience */
+  .academic__courses__box,
+  .experiencie__box {
+    width: 100%;
+  }
+
+  /* Formcontato */
+  .formcontato__text,
+  .formcontato__img {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px 0;
+  }
+}
